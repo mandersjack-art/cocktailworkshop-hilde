@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cocktailworkshop voor Hilde — Menukaart</title>
+<style>
+  :root {
+    --wine: #7a2331;
+    --wine-dark: #591722;
+    --gold: #b8872b;
+    --cream: #fdf9f2;
+    --paper: #ffffff;
+    --ink: #2b2320;
+    --muted: #6f6259;
+    --droog: #5c7a4a;
+    --mocktail: #3d6b8a;
+    --special: #b8872b;
+    --border: #e8ddc9;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    line-height: 1.45;
+    padding-bottom: 40px;
+  }
+
+  header {
+    position: relative;
+    background: linear-gradient(180deg, rgba(89,23,34,0.55) 0%, rgba(89,23,34,0.88) 75%, var(--wine) 100%),
+                url("jacobusmolen-vessem.jpg") center 35% / cover no-repeat;
+    color: var(--cream);
+    text-align: center;
+    padding: 60px 16px 24px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.5rem, 6vw, 2.4rem);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  }
+
+  header p {
+    margin: 8px 0 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #f0d9d0;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+
+  nav.pillbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  nav.pillbar::-webkit-scrollbar { display: none; }
+
+  nav.pillbar a {
+    flex: 0 0 auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    color: var(--wine-dark);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  nav.pillbar a:active { background: var(--wine); color: var(--cream); }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 14px 0;
+  }
+
+  section.category {
+    margin-bottom: 30px;
+    scroll-margin-top: 58px;
+  }
+
+  section.category h2 {
+    color: var(--wine);
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 6px;
+    margin: 0 0 12px;
+  }
+
+  .cocktail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  @media (max-width: 640px) {
+    .cocktail-grid { grid-template-columns: 1fr; }
+    main { padding: 16px 12px 0; }
+  }
+
+  .cocktail {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+
+  .cocktail-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.02rem;
+    margin-bottom: 4px;
+  }
+
+  .tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #fff;
+  }
+  .tag.droog { background: var(--droog); }
+  .tag.mocktail { background: var(--mocktail); }
+  .tag.special { background: var(--special); }
+
+  .cocktail-recipe {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .infobox {
+    background: var(--paper);
+    border: 1px solid var(--gold);
+    border-left: 6px solid var(--gold);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+  }
+  .infobox h3 {
+    margin: 0 0 8px;
+    color: var(--wine);
+    font-size: 1.05rem;
+  }
+  .infobox p { margin: 0 0 8px; font-size: 0.92rem; }
+  .infobox p:last-child { margin-bottom: 0; }
+  .infobox .tip {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    padding: 20px 12px 6px;
+  }
+  .legend .tag { margin: 0 4px; }
+
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+    padding: 10px 12px 4px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cocktailworkshop voor Hilde</h1>
+  <p>40 jaar onderwijs — gevierd bij de molen</p>
+</header>
+
+<nav class="pillbar">
+  <a href="#gin">Gin</a>
+  <a href="#tequila">Tequila</a>
+  <a href="#whiskey">Whiskey</a>
+  <a href="#rum">Rum</a>
+  <a href="#wodka">Wodka</a>
+  <a href="#vermout">Vermout &amp; Bubbels</a>
+  <a href="#overig">Overig</a>
+  <a href="#mocktails">Mocktails</a>
+  <a href="#molenaar">De Molenaar</a>
+</nav>
+
+<main>
+
+  <section class="category" id="gin">
+    <h2>Gin</h2>
+    <div class="cocktail-grid">
+      <div class="cocktail">
+        <div class="cocktail-name">Gin Tonic <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">50ml gin, tonic, schijfje limoen, ijs</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Negroni <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">30ml gin, 30ml rode vermout, 30ml aperol, ijs, sinaasappelschil</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Dry Martini <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">60ml gin, 10ml witte vermout, ijs, schilletje citroen</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">White Lady</div>
+        <div class="cocktail-recipe">50ml gin, 20ml triple sec, 20ml citroensap</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Bramble (cassis)</div>
+        <div class="cocktail-recipe">50ml gin, 25ml citroensap, 15ml suikersiroop over gecrushed ijs, scheutje crème de cassis erover laten druppelen</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" id="tequila">
+    <h2>Tequila</h2>
+    <div class="cocktail-grid">
+      <div class="cocktail">
+        <div class="cocktail-name">Margarita</div>
+        <div class="cocktail-recipe">50ml tequila, 20ml triple sec, 20ml limoensap, zoutrand</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Tequila Sunrise</div>
+        <div class="cocktail-recipe">50ml tequila, sinaasappelsap, scheutje grenadine laten zakken</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Paloma <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">50ml tequila, grapefruitsap, scheutje spa rood, limoen</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">___ Sap Margarita</div>
+        <div class="cocktail-recipe">50ml tequila, 25ml triple sec, 25ml sap naar keuze (grapefruit, ananas, sinaasappel, cranberry, granaatappel), 15ml limoensap, zoutrand</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" id="whiskey">
+    <h2>Whiskey</h2>
+    <div class="cocktail-grid">
+      <div class="cocktail">
+        <div class="cocktail-name">Whiskey Sour</div>
+        <div class="cocktail-recipe">50ml whiskey, 20ml citroensap, 15ml suikersiroop, schudden met ijs</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Whiskey Highball <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">50ml whiskey, spa rood (1:3), ijs, schilletje citroen</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Whiskey &amp; Gemberbier <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">50ml whiskey, gemberbier, scheutje limoen</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">De Molenaar <span class="tag special">Special</span></div>
+        <div class="cocktail-recipe">40ml whiskey, 20ml Licor 43, sinaasappelsap aanvullen, gemberbier aanvullen, garneren met sinaasappelschil gedraaid als molenwiek</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" id="rum">
+    <h2>Rum</h2>
+    <div class="cocktail-grid">
+      <div class="cocktail">
+        <div class="cocktail-name">Dark 'n Stormy</div>
+        <div class="cocktail-recipe">50ml donkere rum, gemberbier, scheutje limoensap</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Daiquiri</div>
+        <div class="cocktail-recipe">50ml witte rum, 25ml limoensap, 15ml suikersiroop</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Mai Tai</div>
+        <div class="cocktail-recipe">30ml witte rum, 30ml donkere rum, 15ml triple sec, 15ml orgeat, 20ml limoensap, scheutje ananassap</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Rum Punch</div>
+        <div class="cocktail-recipe">50ml donkere rum, ananassap, sinaasappelsap, grenadine, limoen</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Mojito</div>
+        <div class="cocktail-recipe">50ml witte rum, 25ml limoensap, 15ml suikersiroop, flink wat muntblaadjes kneuzen, aanvullen met spa rood, crushed ijs</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Piña Colada</div>
+        <div class="cocktail-recipe">50ml witte rum, 90ml ananassap, 50ml kokosroom, flink schudden met ijs, serveren over crushed ijs</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" id="wodka">
+    <h2>Wodka</h2>
+    <div class="cocktail-grid">
+      <div class="cocktail">
+        <div class="cocktail-name">Cosmopolitan</div>
+        <div class="cocktail-recipe">40ml wodka, 15ml triple sec, 20ml cranberrysap, 10ml limoensap</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Moscow Mule <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">50ml wodka, gemberbier, limoensap</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Sex on the Beach</div>
+        <div class="cocktail-recipe">40ml wodka, 20ml perzik likeur, sinaasappelsap, cranberrysap</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Screwdriver <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">50ml wodka, sinaasappelsap, ijs</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Black Russian <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">50ml wodka, 25ml koffielikeur, ijs</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">White Russian</div>
+        <div class="cocktail-recipe">50ml wodka, 25ml koffielikeur, laagje slagroom</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" id="vermout">
+    <h2>Vermout &amp; Bubbels</h2>
+    <div class="cocktail-grid">
+      <div class="cocktail">
+        <div class="cocktail-name">Aperol Spritz</div>
+        <div class="cocktail-recipe">60ml aperol, 90ml prosecco, scheutje spa rood, ijs</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Americano <span class="tag droog">Droog</span></div>
+        <div class="cocktail-recipe">30ml rode vermout, 30ml aperol, spa rood, ijs</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Bellini</div>
+        <div class="cocktail-recipe">prosecco, 20ml perzik likeur</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Kir Royal</div>
+        <div class="cocktail-recipe">prosecco, 15ml crème de cassis</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" id="overig">
+    <h2>Overig</h2>
+    <div class="cocktail-grid">
+      <div class="cocktail">
+        <div class="cocktail-name">43 &amp; Orange</div>
+        <div class="cocktail-recipe">50ml Licor 43, sinaasappelsap, ijs</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Fuzzy Navel</div>
+        <div class="cocktail-recipe">50ml perzik likeur, sinaasappelsap</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Espresso Martini</div>
+        <div class="cocktail-recipe">50ml wodka, 30ml koffielikeur, 10ml suikersiroop, flink schudden voor schuim</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" id="mocktails">
+    <h2>Mocktails</h2>
+    <div class="cocktail-grid">
+      <div class="cocktail">
+        <div class="cocktail-name">Virgin Gin Tonic <span class="tag mocktail">Mocktail</span></div>
+        <div class="cocktail-recipe">alcoholvrije gin, tonic, limoen</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Virgin Spritz <span class="tag mocktail">Mocktail</span></div>
+        <div class="cocktail-recipe">crodino, alcoholvrije bubbelwijn, scheutje spa rood, sinaasappelschijf</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Virgin Mule <span class="tag mocktail">Mocktail</span></div>
+        <div class="cocktail-recipe">gemberbier, limoen, scheutje grenadine</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Shirley Temple <span class="tag mocktail">Mocktail</span></div>
+        <div class="cocktail-recipe">gemberbier, grenadine, schijfje limoen</div>
+      </div>
+      <div class="cocktail">
+        <div class="cocktail-name">Tropical Punch <span class="tag mocktail">Mocktail</span></div>
+        <div class="cocktail-recipe">ananassap, cranberrysap, sinaasappelsap, scheutje limoen</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category" id="molenaar">
+    <div class="infobox">
+      <h3>De Molenaar — special voor Hilde</h3>
+      <p>Deze cocktail (bij Whiskey) is speciaal bedacht ter ere van Hilde: 40 jaar in het onderwijs, gevierd in haar tuin naast de molen waar haar opa ooit molenaar was. Goudkleurig als graan, met een vleugje wind in de bubbels.</p>
+    </div>
+  </section>
+
+  <div class="legend">
+    <span class="tag droog">Droog</span> minder zoet
+    &nbsp;&nbsp;
+    <span class="tag mocktail">Mocktail</span> alcoholvrij
+  </div>
+
+</main>
+
+<footer>Cocktailworkshop voor Hilde &middot; 40 jaar onderwijs</footer>
+
+</body>
+</html>
