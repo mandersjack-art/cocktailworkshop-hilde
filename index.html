@@ -25,7 +25,8 @@
 
   body {
     margin: 0;
-    background: var(--cream);
+    background: linear-gradient(rgba(253,249,242,0.94), rgba(253,249,242,0.94)),
+                url("jacobusmolen-vessem.jpg") center 15% / 480px auto fixed;
     color: var(--ink);
     font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
     line-height: 1.45;
@@ -34,7 +35,7 @@
 
   header {
     position: relative;
-    background: linear-gradient(180deg, rgba(89,23,34,0.55) 0%, rgba(89,23,34,0.88) 75%, var(--wine) 100%),
+    background: linear-gradient(180deg, rgba(89,23,34,0.4) 0%, rgba(89,23,34,0.8) 75%, var(--wine) 100%),
                 url("jacobusmolen-vessem.jpg") center 35% / cover no-repeat;
     color: var(--cream);
     text-align: center;
@@ -189,7 +190,22 @@
     text-align: center;
     font-size: 0.75rem;
     color: var(--muted);
-    padding: 10px 12px 4px;
+    padding: 20px 12px 4px;
+  }
+
+  footer img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+  }
+
+  footer .caption {
+    font-style: italic;
+    margin-top: 4px;
   }
 </style>
 </head>
@@ -309,7 +325,7 @@
       </div>
       <div class="cocktail">
         <div class="cocktail-name">Piña Colada</div>
-        <div class="cocktail-recipe">50ml witte rum, 90ml ananassap, 50ml kokosroom, flink schudden met ijs, serveren over crushed ijs</div>
+        <div class="cocktail-recipe">50ml witte rum, 90ml ananassap, 50ml kokosroom, blenden met flink wat ijs tot slushy</div>
       </div>
     </div>
   </section>
@@ -425,7 +441,11 @@
 
 </main>
 
-<footer>Cocktailworkshop voor Hilde &middot; 40 jaar onderwijs</footer>
+<footer>
+  <img src="jacobusmolen-vessem.jpg" alt="Jacobusmolen in Vessem">
+  <div>Cocktailworkshop bij Hilde (en Peer) &middot; 41 jaar onderwijs</div>
+  <div class="caption">Gevierd onder bij de Jacobusmolen, Vessem</div>
+</footer>
 
 </body>
 </html>
