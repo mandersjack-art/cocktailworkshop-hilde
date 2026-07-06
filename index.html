@@ -152,7 +152,18 @@
   .tag.droog { background: var(--droog); }
   .tag.mocktail { background: var(--mocktail); }
   .tag.special { background: var(--special); }
-  .tag.method { background: var(--method); }
+  .tag.method {
+    background: var(--method);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border-radius: 50%;
+    flex: 0 0 auto;
+  }
+  .tag.method svg { width: 13px; height: 13px; display: block; }
 
   .cocktail-recipe {
     color: var(--muted);
@@ -239,23 +250,23 @@
     <h2>Gin</h2>
     <div class="cocktail-grid">
       <div class="cocktail">
-        <div class="cocktail-name">Gin Tonic <span class="tag droog">Droog</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Gin Tonic <span class="tag droog">Droog</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml gin, tonic, schijfje limoen, ijs</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Negroni <span class="tag droog">Droog</span> <span class="tag method">Geroerd</span></div>
+        <div class="cocktail-name">Negroni <span class="tag droog">Droog</span> <span class="tag method" title="Geroerd (mixglas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></span></div>
         <div class="cocktail-recipe">30ml gin, 30ml rode vermout, 30ml aperol, ijs, sinaasappelschil</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Dry Martini <span class="tag droog">Droog</span> <span class="tag method">Geroerd</span></div>
+        <div class="cocktail-name">Dry Martini <span class="tag droog">Droog</span> <span class="tag method" title="Geroerd (mixglas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></span></div>
         <div class="cocktail-recipe">60ml gin, 10ml witte vermout, ijs, schilletje citroen</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">White Lady <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">White Lady <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">50ml gin, 20ml triple sec, 20ml citroensap</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Bramble (cassis) <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">Bramble (cassis) <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">50ml gin, 25ml citroensap, 15ml suikersiroop over gecrushed ijs, scheutje crème de cassis erover laten druppelen</div>
       </div>
     </div>
@@ -265,19 +276,19 @@
     <h2>Tequila</h2>
     <div class="cocktail-grid">
       <div class="cocktail">
-        <div class="cocktail-name">Margarita <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">Margarita <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">50ml tequila, 20ml triple sec, 20ml limoensap, zoutrand</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Tequila Sunrise <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Tequila Sunrise <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml tequila, sinaasappelsap, scheutje grenadine laten zakken</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Paloma <span class="tag droog">Droog</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Paloma <span class="tag droog">Droog</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml tequila, grapefruitsap, scheutje spa rood, limoen</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">___ Sap Margarita <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">___ Sap Margarita <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">50ml tequila, 25ml triple sec, 25ml sap naar keuze (grapefruit, ananas, sinaasappel, cranberry, granaatappel), 15ml limoensap, zoutrand</div>
       </div>
     </div>
@@ -287,19 +298,19 @@
     <h2>Whiskey</h2>
     <div class="cocktail-grid">
       <div class="cocktail">
-        <div class="cocktail-name">Whiskey Sour <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">Whiskey Sour <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">50ml whiskey, 20ml citroensap, 15ml suikersiroop, schudden met ijs</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Whiskey Highball <span class="tag droog">Droog</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Whiskey Highball <span class="tag droog">Droog</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml whiskey, spa rood (1:3), ijs, schilletje citroen</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Whiskey &amp; Gemberbier <span class="tag droog">Droog</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Whiskey &amp; Gemberbier <span class="tag droog">Droog</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml whiskey, gemberbier, scheutje limoen</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">De Molenaar <span class="tag special">Special</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">De Molenaar <span class="tag special">Special</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">40ml whiskey, 20ml Licor 43, sinaasappelsap aanvullen, gemberbier aanvullen, garneren met sinaasappelschil gedraaid als molenwiek</div>
       </div>
     </div>
@@ -309,27 +320,27 @@
     <h2>Rum</h2>
     <div class="cocktail-grid">
       <div class="cocktail">
-        <div class="cocktail-name">Dark 'n Stormy <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Dark 'n Stormy <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml donkere rum, gemberbier, scheutje limoensap</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Daiquiri <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">Daiquiri <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">50ml witte rum, 25ml limoensap, 15ml suikersiroop</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Mai Tai <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">Mai Tai <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">30ml witte rum, 30ml donkere rum, 15ml triple sec, 15ml orgeat, 20ml limoensap, scheutje ananassap</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Rum Punch <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">Rum Punch <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">50ml donkere rum, ananassap, sinaasappelsap, grenadine, limoen</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Mojito <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Mojito <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml witte rum, 25ml limoensap, 15ml suikersiroop, flink wat muntblaadjes kneuzen, aanvullen met spa rood, crushed ijs</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Piña Colada <span class="tag method">Geblend</span></div>
+        <div class="cocktail-name">Piña Colada <span class="tag method" title="Geblend (blender)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 2.5h7l-1 11h-5z"/><rect x="6.5" y="14" width="11" height="6" rx="1.5" fill="currentColor" stroke="none"/><path d="M9.8 6h4.4M9.4 9h5.2" stroke-width="1.2"/></svg></span></div>
         <div class="cocktail-recipe">50ml witte rum, 90ml ananassap, 50ml kokosroom, blenden met flink wat ijs tot slushy</div>
       </div>
     </div>
@@ -339,27 +350,27 @@
     <h2>Wodka</h2>
     <div class="cocktail-grid">
       <div class="cocktail">
-        <div class="cocktail-name">Cosmopolitan <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">Cosmopolitan <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">40ml wodka, 15ml triple sec, 20ml cranberrysap, 10ml limoensap</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Moscow Mule <span class="tag droog">Droog</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Moscow Mule <span class="tag droog">Droog</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml wodka, gemberbier, limoensap</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Sex on the Beach <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Sex on the Beach <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">40ml wodka, 20ml perzik likeur, sinaasappelsap, cranberrysap</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Screwdriver <span class="tag droog">Droog</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Screwdriver <span class="tag droog">Droog</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml wodka, sinaasappelsap, ijs</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Black Russian <span class="tag droog">Droog</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Black Russian <span class="tag droog">Droog</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml wodka, 25ml koffielikeur, ijs</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">White Russian <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">White Russian <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml wodka, 25ml koffielikeur, laagje slagroom</div>
       </div>
     </div>
@@ -369,19 +380,19 @@
     <h2>Vermout &amp; Bubbels</h2>
     <div class="cocktail-grid">
       <div class="cocktail">
-        <div class="cocktail-name">Aperol Spritz <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Aperol Spritz <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">60ml aperol, 90ml prosecco, scheutje spa rood, ijs</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Americano <span class="tag droog">Droog</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Americano <span class="tag droog">Droog</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">30ml rode vermout, 30ml aperol, spa rood, ijs</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Bellini <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Bellini <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">prosecco, 20ml perzik likeur</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Kir Royal <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Kir Royal <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">prosecco, 15ml crème de cassis</div>
       </div>
     </div>
@@ -391,15 +402,15 @@
     <h2>Overig</h2>
     <div class="cocktail-grid">
       <div class="cocktail">
-        <div class="cocktail-name">43 &amp; Orange <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">43 &amp; Orange <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml Licor 43, sinaasappelsap, ijs</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Fuzzy Navel <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Fuzzy Navel <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">50ml perzik likeur, sinaasappelsap</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Espresso Martini <span class="tag method">Geschud</span></div>
+        <div class="cocktail-name">Espresso Martini <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span></div>
         <div class="cocktail-recipe">50ml wodka, 30ml koffielikeur, 10ml suikersiroop, flink schudden voor schuim</div>
       </div>
     </div>
@@ -409,23 +420,23 @@
     <h2>Mocktails</h2>
     <div class="cocktail-grid">
       <div class="cocktail">
-        <div class="cocktail-name">Virgin Gin Tonic <span class="tag mocktail">Mocktail</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Virgin Gin Tonic <span class="tag mocktail">Mocktail</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">alcoholvrije gin, tonic, limoen</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Virgin Spritz <span class="tag mocktail">Mocktail</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Virgin Spritz <span class="tag mocktail">Mocktail</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">crodino, alcoholvrije bubbelwijn, scheutje spa rood, sinaasappelschijf</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Virgin Mule <span class="tag mocktail">Mocktail</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Virgin Mule <span class="tag mocktail">Mocktail</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">gemberbier, limoen, scheutje grenadine</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Shirley Temple <span class="tag mocktail">Mocktail</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Shirley Temple <span class="tag mocktail">Mocktail</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">gemberbier, grenadine, schijfje limoen</div>
       </div>
       <div class="cocktail">
-        <div class="cocktail-name">Tropical Punch <span class="tag mocktail">Mocktail</span> <span class="tag method">Gebouwd</span></div>
+        <div class="cocktail-name">Tropical Punch <span class="tag mocktail">Mocktail</span> <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span></div>
         <div class="cocktail-recipe">ananassap, cranberrysap, sinaasappelsap, scheutje limoen</div>
       </div>
     </div>
@@ -445,14 +456,14 @@
       <span class="tag mocktail">Mocktail</span> alcoholvrij
     </div>
     <div class="legend-row">
-      <span class="tag method">Geschud</span> shaker, stevig schudden met ijs, dan zeven
+      <span class="tag method" title="Geschud (shaker)"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 2h6a1 1 0 0 1 1 1v2.34l1.71 1.71A1 1 0 0 1 18 8v1H6V8a1 1 0 0 1 .29-.71L8 5.34V3a1 1 0 0 1 1-1z"/><path d="M6 11h12v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/></svg></span> shaker, stevig schudden met ijs, dan zeven
       &nbsp;&nbsp;
-      <span class="tag method">Geroerd</span> mixglas, rustig roeren met ijs, dan zeven
+      <span class="tag method" title="Geroerd (mixglas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></span> mixglas, rustig roeren met ijs, dan zeven
     </div>
     <div class="legend-row">
-      <span class="tag method">Gebouwd</span> direct in het glas opbouwen, over ijs
+      <span class="tag method" title="Gebouwd (in het glas)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h14l-1.8 15.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L5 3z"/><rect x="9" y="8" width="2.6" height="2.6" fill="currentColor" stroke="none"/><rect x="12.6" y="11.2" width="2.6" height="2.6" fill="currentColor" stroke="none"/></svg></span> direct in het glas opbouwen, over ijs
       &nbsp;&nbsp;
-      <span class="tag method">Geblend</span> met ijs in de blender tot slushy
+      <span class="tag method" title="Geblend (blender)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 2.5h7l-1 11h-5z"/><rect x="6.5" y="14" width="11" height="6" rx="1.5" fill="currentColor" stroke="none"/><path d="M9.8 6h4.4M9.4 9h5.2" stroke-width="1.2"/></svg></span> met ijs in de blender tot slushy
     </div>
   </div>
 
